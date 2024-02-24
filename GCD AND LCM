@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,r,temp_a,temp_b,gcd,lcm,i=1;
+	char ch;
+	do
+	{	
+		printf("Enter any two numbers: ");
+		scanf("%d%d",&a,&b);
+		temp_a=a;
+		temp_b=b;
+		while (temp_b)
+		{
+			r=temp_a%temp_b;
+			temp_a=temp_b;
+			temp_b=r;
+		}
+		gcd=temp_a;
+		lcm=(a*b)/gcd;
+		printf("GCD= %d\nLCM= %d\n",gcd,lcm);
+		printf("DO you want to continue (Y/N) : ");
+		scanf(" %c",&ch); 		
+	}
+	while(ch=='Y'||ch=='y');
+	return 0;
+
+}
