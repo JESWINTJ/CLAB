@@ -1,0 +1,54 @@
+#include<stdio.h>
+read mat(int[][10],int,int),printmat(int[][10],int,int)matproduct(int[][10],int,int,int[][10],int int,int[][10]);
+void main()
+{
+	int a[10][10],m,n,b[10][10],p,q,c[10][10];
+	printf("\n enter the order of first matrix\n");
+	scanf("%d%d",&p,&q);
+	while(n==p)
+	{
+		printf("\n enter the elements of first matrix");
+		readmat(a,m,n);
+		printmat(a,m,n);
+		printf("\n enter the elements of  second matrix");
+		read(b,p,q);
+		printmat(b,p,q);
+		matproduct(a,m,n,b,p,q,c);
+		printf("\n product of a and b is \n");
+		printmat(c,m,q);
+	}
+	else
+		printf("\mutiplication impossibe");
+}
+void readmat(inta[][10],int m,int n)
+{
+	int i,j;
+	for(i=0;i<m;i++)
+		for(j=0;j<n;j++);
+			scanf("%d",&a[i][j]);
+}
+void printmat(int a[][10],int m,int n)
+{
+	int i,j;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			printf("5%d",a[i][j]);
+		}
+		printf("\n");
+	}
+}
+void matproduct(int a[][10],int m, int n,int b[][10],int p,int q,intc[][10]);
+{
+	int i,j,k;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<q;j++)
+		{
+			c[i][j]=0;
+			for(k=0;k<n;k++)
+				c[i][j]=c[i][j]+a[i][k]*b[k][j];
+		}
+	}
+}
