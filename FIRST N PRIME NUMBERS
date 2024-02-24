@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,num,i,final,prime,count=1;
+	printf("How many  numbers: ");
+	scanf("%d",&n);
+	printf("The first %d prime numbers are: ",n);
+	for(num=2;count<=n;num++)
+	{
+		prime=1;
+		final=sqrt(num);
+		for(i=2;i<=final;i++)
+		{
+			if(num%i==0)
+			{
+				prime=0;
+				break;
+			}
+		}
+		if(prime)
+		{
+			printf("%d\t",num);
+			count++;
+		}	
+	}
+	printf("\n");
+}
