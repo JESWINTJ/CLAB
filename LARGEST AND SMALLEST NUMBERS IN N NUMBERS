@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,large,small,num;
+	printf("How many number?");
+	scanf("%d",&n);
+	printf("Enter the numbers: ");
+	scanf("%d",&num);
+	large=num;
+	small=num;
+	for(i=1;i<n;i++)
+	{
+		scanf("%d",&num);
+		if(num>large)
+		{
+			large=num;
+		}
+		else if(num<small)
+		{
+			small=num;
+		}
+	}
+	printf("\n Large number is =%d\n",large);
+	printf("\n Small number is =%d\n",small);
+	
+	return 0;
+}
