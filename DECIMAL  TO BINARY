@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+{
+	int a[20],num,tnum,i,j;
+	printf("enter an unsigned decimal integer:");
+	scanf("%u",&num);
+	tnum=num;
+	printf("The binary equivalent of %d is :",num);
+	if(!num) printf("%d\n",num);
+	for(i=0;tnum>0;i++)
+	{
+		a[i]=tnum%2;
+		tnum=tnum/2;
+	}
+	for(j=i-1;j>=0;j--)
+		printf("%d",a[j]);
+	printf("\n");
+}
