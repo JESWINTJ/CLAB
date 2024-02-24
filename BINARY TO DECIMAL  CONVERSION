@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+	int binary_num,temp_bnum,decimal_num=0,digit,multiplier=1,b_num=1;
+	char ch;
+	printf("Enter a binary number: ");
+	scanf("%d",&binary_num);
+	temp_bnum=binary_num;
+	while(temp_bnum)
+	{
+		digit=temp_bnum%10;
+		if(digit==0 || digit==1)
+		{
+			decimal_num=decimal_num+(digit*multiplier);
+			multiplier*=2;
+			temp_bnum/=10;
+		}
+		else
+		{
+			printf("The given number is not a binary number!!\n");
+			b_num=0;
+			break;
+		}
+	}
+	if(b_num)
+	{
+	printf("\n The decimal number equivalent of %d is %d\n",binary_num,decimal_num);
+	}
+}
